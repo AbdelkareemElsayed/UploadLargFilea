@@ -22,3 +22,7 @@ Route::get('/', function () {
 
 Route::get('file-upload', [FileUploadController::class, 'index'])->name('files.index');
 Route::post('file-upload/upload-large-files', [FileUploadController::class, 'uploadLargeFiles'])->name('files.upload.large');
+
+
+Route::get('upload/create', [FileUploadController::class, 'create']);
+Route::post('upload', [FileUploadController::class, 'store']);
